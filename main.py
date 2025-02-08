@@ -160,9 +160,6 @@ class Light(pygame.sprite.Sprite):
             for col in range(len(level[row])):
                 if level[row][col] == 2:
                     end_rect_light = pygame.Rect(col * title_wight, row * title_hight, 40, 40)
-                    if self.rect.colliderect(end_rect_light):
-                        self.rect.x = col * title_wight
-                        self.rect.y = row * title_hight
                 if level[row][col] == 1 or level[row][col] == 5:
                     wall_rect = pygame.Rect(col * title_wight, row * title_hight, title_wight, title_hight)
                     if self.rect.colliderect(wall_rect):
@@ -214,9 +211,6 @@ class Darkness(pygame.sprite.Sprite):
             for col in range(len(level[row])):
                 if level[row][col] == 3:
                     end_rect_darkness = pygame.Rect(col * title_wight, row * title_hight, title_wight, title_hight)
-                    if self.rect.colliderect(end_rect_darkness):
-                        self.rect.x = col * title_wight
-                        self.rect.y = row * title_hight
                 if level[row][col] == 1 or level[row][col] == 4:
                     wall_rect = pygame.Rect(col * title_wight, row * title_hight, title_wight, title_hight)
                     if self.rect.colliderect(wall_rect):
